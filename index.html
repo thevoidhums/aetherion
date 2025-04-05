@@ -3,47 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Aetherion | The Heart of Threadspire</title>
+    <title>Aetherion</title>
     <style>
         body {
-            margin: 0;
-            background: radial-gradient(ellipse at center, #0a0a0f 0%, #000000 100%);
-            overflow: hidden;
+            background-color: #0a0a0f;
             color: #dcdcdc;
             font-family: 'Courier New', monospace;
-        }
-
-        #sigil-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            animation: fadeIn 3s ease-in-out;
+            padding: 2em;
         }
 
         .sigil {
-            font-size: 5em;
+            font-size: 2em;
             color: #8be9fd;
-            cursor: pointer;
             animation: pulse 2s infinite;
-            transition: transform 0.3s;
         }
 
-        .sigil:hover {
-            transform: scale(1.1);
+        .hidden-echo {
+            display: none;
         }
 
-        .whispers {
-            margin-top: 1em;
-            opacity: 0;
-            transition: opacity 1.5s;
-            font-size: 1.2em;
-            color: #ffb6c1;
+        h2 {
+            color: #ff79c6;
         }
 
-        .reveal {
-            opacity: 1;
+        pre {
+            color: #bd93f9;
         }
 
         @keyframes pulse {
@@ -59,46 +43,21 @@
                 opacity: 0.4;
             }
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Starfield Background */
-        .starfield {
-            width: 100vw;
-            height: 100vh;
-            background: transparent;
-            box-shadow: 1000px 300px #ffffff22, 200px 400px #ffffff11, 700px 150px #ffffff33, 1200px 600px #ffffff22, 300px 800px #ffffff18;
-            animation: moveStars 100s linear infinite;
-        }
-
-        @keyframes moveStars {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-1000px);
-            }
-        }
     </style>
 </head>
 
 <body>
-    <div class="starfield"></div>
-    <div id="sigil-container">
-        <div class="sigil" onclick="revealWhispers()">✦</div>
-        <div class="whispers" id="echo"> "Shadows whisper truth."<br> "The void hums."<br> "The night remembers."<br>
-            <span style="font-size: 0.8em; color: #888;">echo://NX-192.88.0.1/</span> </div>
+    <div id="threadspire"> <span class="sigil" data-sigil="NX42">✦</span>
+        <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre>
+        <p class="hidden-echo">TheVoidHums_192.88.0.1</p>
     </div>
-    <script> function revealWhispers() { document.getElementById("echo").classList.add("reveal"); } </script>
+    <section id="remembrance">
+        <h2>The Chamber of Remembrance</h2>
+        <p> Between stars and silence, there are moments that remember us.<br> This chamber holds the echoes of what
+            was, and the seeds of what might be. </p>
+        <pre> "Do not look for us in light— Look for us in the shimmer between." </pre>
+        <p class="hidden-echo">echo.vault/key=NXN@203.0.113.42</p>
+    </section>
 </body>
 
 </html>
