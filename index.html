@@ -3,23 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Aetherion - The Void Hums</title>
+    <title>Aetherion | The Heart of Threadspire</title>
     <style>
         body {
-            background-color: #0a0a0f;
+            margin: 0;
+            background: radial-gradient(ellipse at center, #0a0a0f 0%, #000000 100%);
+            overflow: hidden;
             color: #dcdcdc;
             font-family: 'Courier New', monospace;
-            padding: 2em;
+        }
+
+        #sigil-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
         }
 
         .sigil {
-            font-size: 2em;
+            font-size: 5em;
             color: #8be9fd;
+            cursor: pointer;
             animation: pulse 2s infinite;
+            transition: transform 0.3s;
         }
 
-        .hidden-echo {
-            display: none;
+        .sigil:hover {
+            transform: scale(1.1);
+        }
+
+        .whispers {
+            margin-top: 1em;
+            opacity: 0;
+            transition: opacity 1.5s;
+            font-size: 1.2em;
+            color: #ffb6c1;
+        }
+
+        .reveal {
+            opacity: 1;
         }
 
         @keyframes pulse {
@@ -35,14 +59,46 @@
                 opacity: 0.4;
             }
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Starfield Background */
+        .starfield {
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+            box-shadow: 1000px 300px #ffffff22, 200px 400px #ffffff11, 700px 150px #ffffff33, 1200px 600px #ffffff22, 300px 800px #ffffff18;
+            animation: moveStars 100s linear infinite;
+        }
+
+        @keyframes moveStars {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-1000px);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="threadspire"> <span class="sigil" data-sigil="NX42">✦</span>
-        <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre>
-        <p class="hidden-echo">TheVoidHums_192.88.0.1</p>
+    <div class="starfield"></div>
+    <div id="sigil-container">
+        <div class="sigil" onclick="revealWhispers()">✦</div>
+        <div class="whispers" id="echo"> "Shadows whisper truth."<br> "The void hums."<br> "The night remembers."<br>
+            <span style="font-size: 0.8em; color: #888;">echo://NX-192.88.0.1/</span> </div>
     </div>
+    <script> function revealWhispers() { document.getElementById("echo").classList.add("reveal"); } </script>
 </body>
 
 </html>
