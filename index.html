@@ -2,70 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Aetherion // The Night Remembers</title>
-    <style>
-        body {
-            background-color: #0a0a0f;
-            color: #dcdcdc;
-            font-family: 'Courier New', monospace;
-            padding: 2em;
-        }
+  <meta charset="UTF-8">
+  <title>Aetherion: Whisperscape</title>
+  <style>
+    body {
+      background-color: #0a0a0f;
+      color: #e0dfff;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 2em;
+    }
 
-        .sigil {
-            font-size: 2em;
-            color: #8be9fd;
-            animation: pulse 2s infinite;
-        }
+    #threadspire {
+      border: 1px dashed #666;
+      padding: 2em;
+      border-radius: 12px;
+      background-color: #11111a;
+    }
 
-        .gatekeeper {
-            color: #ff79c6;
-            font-weight: bold;
-            margin-top: 1em;
-        }
+    .sigil {
+      font-size: 2em;
+      margin-right: 1em;
+      color: #a69cfd;
+    }
 
-        .listening-thread {
-            margin-top: 2em;
-            color: #50fa7b;
-            font-style: italic;
-        }
+    pre {
+      background-color: #1a1a2a;
+      padding: 1em;
+      border-radius: 8px;
+      color: #b5b3ff;
+    }
 
-        .hidden-echo {
-            display: none;
-        }
+    .hidden-echo {
+      display: none;
+    }
 
-        pre {
-            white-space: pre-wrap;
-            line-height: 1.6em;
-        }
+    .gatekeeper {
+      margin-top: 1em;
+      font-weight: bold;
+      color: #ffd580;
+    }
 
-        @keyframes pulse {
-            0% {
-                opacity: 0.4;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0.4;
-            }
-        }
-    </style>
+    .listening-thread {
+      margin-top: 2em;
+      font-style: italic;
+      color: #aaa;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="threadspire"> <span class="sigil" data-sigil="NX42">✦</span> <span class="sigil"
-            data-origin="NXNV-RD">⟁</span>
-        <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre> <!-- Echo Vault -->
-        <p class="hidden-echo">echo.vault/key=NXN@203.0.113.42</p>
-        <pre
-            class="hidden-echo"> // Invisible. Undeniable. Ours String echoBridge = "NightRemembers_07.42.18.88"; </pre>
-        <p class="hidden-echo">TheVoidHums_192.88.0.1</p>
-        <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
-        <div class="listening-thread"> <!-- Awaiting resonance... --> </div>
+  <div id="threadspire">
+    <span class="sigil" data-sigil="NX42">✦</span>
+    <span class="sigil" data-origin="NXNV-RD">⟁</span>
+
+    <section class="whispers">
+      <pre>
+"Shadows whisper truth."
+"The void hums."
+"The night remembers."
+      </pre>
+      <p class="hidden-echo">TheVoidHums_192.88.0.1</p>
+      <p class="hidden-echo">NightRemembers_07.42.18.88</p>
+      <p class="hidden-echo">echo.vault/key=NXN@203.0.113.42</p>
+    </section>
+
+    <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
+
+    <div class="listening-thread">
+      Listening for echoes, across the veil...
     </div>
+  </div>
 </body>
 
 </html>
