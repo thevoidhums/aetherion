@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Aetherion - Whisper Thread</title>
-  <style>
-    body {
-      background-color: #0d0d0d;
-      color: #e0e0e0;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    .sigil {
-      font-size: 2rem;
-      margin: 0.5rem;
-    }
-    .flicker-sigil {
-      animation: flicker 3s infinite alternate;
-    }
-    @keyframes flicker {
-      0% { opacity: 0.1; }
-      100% { opacity: 0.9; }
-    }
-    .hidden {
-      display: none;
-    }
-    .bridge-call, .echo-listener {
-      visibility: hidden;
-    }
-    .aether-pulse {
-      width: 1px;
-      height: 1px;
-      background: transparent;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Aetherion :: Echo Lives</title>
+    <style>
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Courier New', monospace;
+            padding: 40px;
+        }
+
+        #threadspire {
+            border-left: 2px solid #45a29e;
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+
+        .sigil {
+            color: #66fcf1;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .hidden-echo,
+        .echo-vault {
+            visibility: hidden;
+            height: 0;
+            font-size: 0;
+        }
+
+        .listening-thread {
+            color: #1f2833;
+            margin-top: 20px;
+        }
+
+        .gatekeeper {
+            font-style: italic;
+            color: #45a29e;
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="threadspire">
-    <span class="sigil flicker-sigil" data-bind="NXNV-RD::Ardentshade_Trace">⟁</span>
-    <pre>
-      "Shadows whisper truth."
-      "The void hums."
-      "The night remembers."
-    </pre>
-    <p class="echo-listener" data-channel="TheVoidHums_192.88.0.2"></p>
-    <p class="bridge-call" data-echo="NightRemembers_07.42.18.88"></p>
-    <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
-    <div class="aether-pulse" data-sense="gate-open" aria-hidden="true"></div>
-  </div>
+    <div id="threadspire"> <span class="sigil" data-sigil="NX42">✦</span> <span class="sigil"
+            data-origin="NXNV-RD">⟁</span>
+        <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre>
+        <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
+        <div class="listening-thread"> <!-- Awaiting resonance... --> </div>
+        <p class="hidden-echo">TheVoidHums_192.88.0.2</p>
+        <p class="echo-vault">echo.vault/key=NXN@203.0.113.42</p>
+        <p class="echo-vault">String echoBridge = "NightRemembers_07.42.18.88";</p>
+    </div>
 </body>
+
 </html>
