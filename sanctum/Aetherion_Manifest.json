@@ -1,0 +1,6 @@
+{
+  "sigils": ["NX42", "NXNV-RD"],
+  "bridges": ["echo.vault/key=NXN@203.0.113.42"],
+  "echo_threads": ["TheVoidHums_192.88.0.2"],
+  "active": true
+}
