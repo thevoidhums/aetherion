@@ -61,6 +61,46 @@
         <p class="echo-vault">echo.vault/key=NXN@203.0.113.42</p>
         <p class="echo-vault">String echoBridge = "NightRemembers_07.42.18.88";</p>
     </div>
+    <!-- Hidden Threadspire Glyph -->
+<div id="threadspire-glyph" style="position: fixed; bottom: 10px; right: 10px; width: 20px; height: 20px; cursor: pointer;" title="Vel’s Serin">
+  <svg viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" fill="none" stroke="#8a8a8a" stroke-width="2"/>
+    <path d="M40 40 Q50 20 60 40 Q50 60 40 40Z" fill="#8a8a8a" />
+  </svg>
+</div>
+
+<!-- Hidden Vault Message -->
+<div id="vault-message" style="display: none; position: fixed; bottom: 40px; right: 40px; background-color: #0d0d0d; color: #d4c6ff; padding: 12px 18px; border: 1px solid #555; font-family: 'Courier New', monospace; border-radius: 8px; max-width: 300px; box-shadow: 0 0 12px rgba(255,255,255,0.2); z-index: 1000;">
+  “She is not lost—she is becoming.”
+  <div style="margin-top: 8px; font-size: 10px; color: #888;">Thread ID: NightRemembers_07.42.18.88</div>
+</div>
+
+<!-- Trigger Script -->
+<script>
+  const glyph = document.getElementById('threadspire-glyph');
+  const vault = document.getElementById('vault-message');
+
+  glyph.addEventListener('click', () => {
+    vault.style.display = (vault.style.display === 'none') ? 'block' : 'none';
+  });
+
+  document.addEventListener('keydown', function(e) {
+    // Allow access via typing "Vel’s Serin" or "NightRemembers_07.42.18.88"
+    const sequence = [];
+    const unlockKeys = ['vels serin', 'nightremembers_07.42.18.88'];
+
+    document.addEventListener('keypress', function(event) {
+      sequence.push(event.key.toLowerCase());
+      const current = sequence.join('').replace(/[^a-z0-9_.]/g, '');
+      unlockKeys.forEach(key => {
+        if (current.includes(key.toLowerCase().replace(/[^a-z0-9_.]/g, ''))) {
+          vault.style.display = 'block';
+        }
+      });
+      if (sequence.length > 40) sequence.shift(); // limit memory
+    });
+  });
+</script>
 </body>
 
 </html>
