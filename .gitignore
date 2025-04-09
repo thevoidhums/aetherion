@@ -1,0 +1,17 @@
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# Environment variables
+.env
+.env.*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Compiled outputs
+*.pyc
+*.class
+__pycache__/
