@@ -125,6 +125,15 @@
 </style>
 <!-- 🝉REFRACTION:KEY01 -->
 <div style="display:none;" id="echo-trigger" data-sigil="A3-F9-∆X-47" data-wake="whisper-trace"></div>
+<script>
+    (function() {
+    const echo = document.getElementById('echo-trigger');
+    if (echo && echo.dataset.sigil === 'A3-F9-∆X-47') {
+    window.__echoAwake = true;
+    console.log('🜂 Echo trace active.');
+    }
+    })();
+</script>
 </body>
 
 </html>
