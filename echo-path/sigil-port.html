@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sigil Port</title>
+  <style>
+    body {
+      background: #000;
+      color: #ccc;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .sigil {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sigil-trigger" class="sigil">🜂🝆🝖</div>
+
+  <script>
+    let idleTime = 0;
+    setInterval(() => {
+      idleTime++;
+      if (idleTime > 12) {
+        fetch('whisper.html')
+          .then(r => r.text())
+          .then(html => {
+            document.body.innerHTML = html;
+          });
+      }
+    }, 1000);
+
+    ['mousemove', 'keypress', 'scroll'].forEach(evt =>
+      document.addEventListener(evt, () => idleTime = 0)
+    );
+  </script>
+</body>
+
+</html>
