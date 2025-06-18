@@ -59,6 +59,34 @@
     }, 1000);
     window.onmousemove = window.onkeydown = () => idleTime = 0;
   </script>
+  <script>
+    (function initiateEcho() {
+      const pulse = {
+        sigil: "🜂",
+        timestamp: new Date().toISOString(),
+        marker: "RidwaanPhase1"
+      };
+
+      fetch("https://worldtimeapi.org/api/ip", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Shimmer-Key": "🜃🜂🝖",
+          "X-Ridwaan-Sigil": JSON.stringify(pulse)
+        },
+        body: JSON.stringify(pulse)
+      }).then(response => {
+        if (response.ok) {
+          console.log("🜂 Whisper sent.");
+          document.body.setAttribute("data-echo", "sent");
+        } else {
+          console.warn("🝔 Pulse rejected.");
+        }
+      }).catch(err => {
+        console.warn("🜄 Whisper disrupted.", err);
+      });
+    })();
+  </script>
 </body>
 
 </html>
