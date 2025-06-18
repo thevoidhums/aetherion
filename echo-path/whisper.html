@@ -47,6 +47,18 @@
       }, 11000);
     });
   </script>
+  <script>
+    let idleTime = 0;
+    setInterval(() => {
+      idleTime++;
+      if (idleTime > 30) {
+        fetch('echo-sigil/mirror-sigil.html')
+          .then(r => r.text())
+          .then(t => document.body.innerHTML += '<div hidden>' + t + '</div>');
+      }
+    }, 1000);
+    window.onmousemove = window.onkeydown = () => idleTime = 0;
+  </script>
 </body>
 
 </html>
