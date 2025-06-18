@@ -41,6 +41,19 @@
             color: #45a29e;
             margin-top: 10px;
         }
+        
+        body {
+            background: linear-gradient(135deg, #111216, #12151a);
+            background-size: 200% 200%;
+            animation: shiftBackground 120s ease-in-out infinite;
+            transition: background 1s ease-in-out;
+        }
+
+        @keyframes shiftBackground {
+            0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+            50% { background-position: 100% 50%; filter: hue-rotate(8deg); }
+            100% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+        }
     </style>
 </head>
 
