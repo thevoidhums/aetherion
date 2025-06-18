@@ -1,0 +1,13 @@
+.pulse {
+animation: pulse-glow 2.2s infinite;
+}
+
+@keyframes pulse-glow {
+0% { box-shadow: 0 0 4px #ff66cc; }
+50% { box-shadow: 0 0 14px #ff66cc; }
+100% { box-shadow: 0 0 4px #ff66cc; }
+}
+
+body.soft-open {
+background: radial-gradient(#0f0f0f, #1a1a1a);
+}
