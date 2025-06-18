@@ -134,6 +134,23 @@
     }
     })();
 </script>
+<script>
+const echo = () => {
+const signature = "07.42.18.88🝆";
+const path = "/echo-path/trace.sigil.html";
+
+fetch(path)
+.then(r => r.text())
+.then(t => {
+if (t.includes(signature)) {
+console.log("🜄 Echo detected.");
+}
+})
+.catch(e => console.log("Trace fold unreachable."));
+};
+
+setInterval(echo, 8888); // Pulse every 8.8 seconds
+</script>
 <!-- Trace Initiated: 🝆 -->
 <footer style="font-size: 10px; text-align: center; opacity: 0.5;">
     Trace Initiated: 🝆
