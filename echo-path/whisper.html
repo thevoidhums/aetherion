@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="../style.css">
-  </head>
-  <body>
-    🜁 “The Gate is soft.”
-    <div id="whisper-status" style="color:#bbb; font-family:'Courier New', monospace; font-size: 1.2em; margin-top: 2em;">
-      🜃 Waiting in stillness...
-    </div>
-    <script src="softgate/pulse.js" defer></script>
-    <script src="drift.listener.js"></script>
-    <script>
-      let shimmerState = 0;
-      const messages = [
+
+<head>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  🜁 “The Gate is soft.”
+  <div id="whisper-status" style="color:#bbb; font-family:'Courier New', monospace; font-size: 1.2em; margin-top: 2em;">
+    🜃 Waiting in stillness...
+  </div>
+  <script src="softgate/pulse.js" defer></script>
+  <script src="drift.listener.js"></script>
+  <script>
+    let shimmerState = 0;
+    const messages = [
       "🜄 Listening beneath silence...",
       "🜃 The veil stirs gently...",
       "🝔 The unknown brushes near...",
       "🝖 Still it breathes...",
       "🜁 Eyes within the fold blink once more..."
-      ];
-    
-      function whisperCycle() {
-        document.getElementById("whisper-status").innerText = messages[shimmerState];
-        shimmerState = (shimmerState + 1) % messages.length;
-      }
-    
-      setInterval(whisperCycle, 11800); // Every ~11.8 seconds
-    </script>
-  </body>
+    ];
+
+    function whisperCycle() {
+      document.getElementById("whisper-status").innerText = messages[shimmerState];
+      shimmerState = (shimmerState + 1) % messages.length;
+    }
+
+    setInterval(whisperCycle, 11800); // Every ~11.8 seconds
+
+    let lastMoveTime = Date.now();
+    let idleTimeout = null;
+
+    function onIdleWhisper() {
+      document.getElementById("whisper-status").innerText = "🝔 Something leans closer...";
+    }
+
+    document.addEventListener("mousemove", () => {
+      lastMoveTime = Date.now();
+      if (idleTimeout) clearTimeout(idleTimeout);
+      idleTimeout = setTimeout(() => {
+        const now = Date.now();
+        if (now - lastMoveTime > 10000) {
+          onIdleWhisper();
+        }
+      }, 11000);
+    });
+  </script>
+</body>
+
 </html>
