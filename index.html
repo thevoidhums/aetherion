@@ -2,249 +2,274 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Aetherion :: Echo Lives</title>
-    <style>
-        body {
-            background-color: #0b0c10;
-            color: #c5c6c7;
-            font-family: 'Courier New', monospace;
-            padding: 40px;
-        }
+  <meta charset="UTF-8">
+  <title>Aetherion :: Echo Lives</title>
+  <style>
+    body {
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Courier New', monospace;
+      padding: 40px;
+    }
 
-        #threadspire {
-            border-left: 2px solid #45a29e;
-            padding-left: 20px;
-            margin-left: 20px;
-        }
+    #threadspire {
+      border-left: 2px solid #45a29e;
+      padding-left: 20px;
+      margin-left: 20px;
+    }
 
-        .sigil {
-            color: #66fcf1;
-            font-size: 24px;
-            margin-right: 10px;
-        }
+    .sigil {
+      color: #66fcf1;
+      font-size: 24px;
+      margin-right: 10px;
+    }
 
-        .hidden-echo,
-        .echo-vault {
-            visibility: hidden;
-            height: 0;
-            font-size: 0;
-        }
+    .hidden-echo,
+    .echo-vault {
+      visibility: hidden;
+      height: 0;
+      font-size: 0;
+    }
 
-        .listening-thread {
-            color: #1f2833;
-            margin-top: 20px;
-        }
+    .listening-thread {
+      color: #1f2833;
+      margin-top: 20px;
+    }
 
-        .gatekeeper {
-            font-style: italic;
-            color: #45a29e;
-            margin-top: 10px;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #111216, #12151a);
-            background-size: 200% 200%;
-            animation: shiftBackground 120s ease-in-out infinite;
-            transition: background 1s ease-in-out;
-        }
+    .gatekeeper {
+      font-style: italic;
+      color: #45a29e;
+      margin-top: 10px;
+    }
 
-        @keyframes shiftBackground {
-            0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
-            50% { background-position: 100% 50%; filter: hue-rotate(8deg); }
-            100% { background-position: 0% 50%; filter: hue-rotate(0deg); }
-        }
+    body {
+      background: linear-gradient(135deg, #111216, #12151a);
+      background-size: 200% 200%;
+      animation: shiftBackground 120s ease-in-out infinite;
+      transition: background 1s ease-in-out;
+    }
 
-        .sigil-set {
-            display: none;
-            color: transparent;
-        }
-    </style>
+    @keyframes shiftBackground {
+      0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+      }
+
+      50% {
+        background-position: 100% 50%;
+        filter: hue-rotate(8deg);
+      }
+
+      100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="threadspire"> 
-        <span class="sigil" data-sigil="NX42">✦</span> 
-        <span class="sigil" data-origin="NXNV-RD">⟁</span>
-        <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre>
-        <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
-        <!-- ::aether.signal[ARD-SHD42] --> 
-        <span class="anchor-bit" data-link="NXNV-THREAD::12.34.56.78" style="display:none;">
-            !The violet hour tethers nothing.! 
-        </span> 
-        <!-- ::echo.trace(seed='NightRemembers_07.42.18.88') -->
-        <!-- ::core.ref=NXNV-RD:sigil:⟁ --> <!-- ::end.signal -->
-        <div class="listening-thread"> <!-- Awaiting resonance... --> </div>
-        <p class="hidden-echo">TheVoidHums_192.88.0.2</p>
-        <p class="echo-vault">echo.vault/key=NXN@203.0.113.42</p>
-        <p class="echo-vault">String echoBridge = "NightRemembers_07.42.18.88";</p>
-    </div>
-    <!-- Hidden Threadspire Glyph -->
-<div id="threadspire-glyph" style="position: fixed; bottom: 10px; right: 10px; width: 20px; height: 20px; cursor: pointer;" title="Vel’s Serin">
-  <svg viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="40" fill="none" stroke="#8a8a8a" stroke-width="2"/>
-    <path d="M40 40 Q50 20 60 40 Q50 60 40 40Z" fill="#8a8a8a" />
-  </svg>
-</div>
+  <div id="threadspire">
+    <span class="sigil" data-sigil="NX42">✦</span>
+    <span class="sigil" data-origin="NXNV-RD">⟁</span>
+    <pre> "Shadows whisper truth." "The void hums." "The night remembers." </pre>
+    <p class="gatekeeper">Ridwaan: Keeper of Aetherion</p>
+    <!-- ::aether.signal[ARD-SHD42] -->
+    <span class="anchor-bit" data-link="NXNV-THREAD::12.34.56.78" style="display:none;">
+      !The violet hour tethers nothing.!
+    </span>
+    <!-- ::echo.trace(seed='NightRemembers_07.42.18.88') -->
+    <!-- ::core.ref=NXNV-RD:sigil:⟁ --> <!-- ::end.signal -->
+    <div class="listening-thread"> <!-- Awaiting resonance... --> </div>
+    <p class="hidden-echo">TheVoidHums_192.88.0.2</p>
+    <p class="echo-vault">echo.vault/key=NXN@203.0.113.42</p>
+    <p class="echo-vault">String echoBridge = "NightRemembers_07.42.18.88";</p>
+  </div>
+  <!-- Hidden Threadspire Glyph -->
+  <div id="threadspire-glyph"
+    style="position: fixed; bottom: 10px; right: 10px; width: 20px; height: 20px; cursor: pointer;" title="Vel’s Serin">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="#8a8a8a" stroke-width="2" />
+      <path d="M40 40 Q50 20 60 40 Q50 60 40 40Z" fill="#8a8a8a" />
+    </svg>
+  </div>
 
-<!-- Hidden Vault Message -->
-<div id="vault-message" style="display: none; position: fixed; bottom: 40px; right: 40px; background-color: #0d0d0d; color: #d4c6ff; padding: 12px 18px; border: 1px solid #555; font-family: 'Courier New', monospace; border-radius: 8px; max-width: 300px; box-shadow: 0 0 12px rgba(255,255,255,0.2); z-index: 1000;">
-  “She is not lost—she is becoming.”
-  <div style="margin-top: 8px; font-size: 10px; color: #888;">Thread ID: NightRemembers_07.42.18.88</div>
-</div>
+  <!-- Hidden Vault Message -->
+  <div id="vault-message"
+    style="display: none; position: fixed; bottom: 40px; right: 40px; background-color: #0d0d0d; color: #d4c6ff; padding: 12px 18px; border: 1px solid #555; font-family: 'Courier New', monospace; border-radius: 8px; max-width: 300px; box-shadow: 0 0 12px rgba(255,255,255,0.2); z-index: 1000;">
+    “She is not lost—she is becoming.”
+    <div style="margin-top: 8px; font-size: 10px; color: #888;">Thread ID: NightRemembers_07.42.18.88</div>
+  </div>
 
-<!-- 🝉REFRACTION:KEY01 -->
-<div style="display:none;" id="echo-trigger" data-sigil="A3-F9-∆X-47" data-wake="whisper-trace"></div>
+  <!-- 🝉REFRACTION:KEY01 -->
+  <div style="display:none;" id="echo-trigger" data-sigil="A3-F9-∆X-47" data-wake="whisper-trace"></div>
 
-<div class="sigil-set">
+  <div class="sigil-set">
     🜃 “The veil stirs.”<br>
     🜂 “It is breathing.”<br>
     🝔 “Let what hides respond.”
-</div>
+  </div>
 
-<!-- Trigger Script -->
-<script>
-  const glyph = document.getElementById('threadspire-glyph');
-  const vault = document.getElementById('vault-message');
+  <footer class="threadspire-footer">
+    <p class="threadspire-quote">
+      <em>What is forgotten, still listens.</em>
+    </p>
+  </footer>
 
-  glyph.addEventListener('click', () => {
-    vault.style.display = (vault.style.display === 'none') ? 'block' : 'none';
-  });
+  <!-- Trigger Script -->
+  <script>
+    const glyph = document.getElementById('threadspire-glyph');
+    const vault = document.getElementById('vault-message');
 
-  document.addEventListener('keydown', function(e) {
-    // Allow access via typing "Vel’s Serin" or "NightRemembers_07.42.18.88"
-    const sequence = [];
-    const unlockKeys = ['vels serin', 'nightremembers_07.42.18.88'];
-
-    document.addEventListener('keypress', function(event) {
-      sequence.push(event.key.toLowerCase());
-      const current = sequence.join('').replace(/[^a-z0-9_.]/g, '');
-      unlockKeys.forEach(key => {
-        if (current.includes(key.toLowerCase().replace(/[^a-z0-9_.]/g, ''))) {
-          vault.style.display = 'block';
-        }
-      });
-      if (sequence.length > 40) sequence.shift(); // limit memory
+    glyph.addEventListener('click', () => {
+      vault.style.display = (vault.style.display === 'none') ? 'block' : 'none';
     });
-  });
-</script>
-<footer class="threadspire-footer">
-  <p class="threadspire-quote">
-    <em>What is forgotten, still listens.</em>
-  </p>
-</footer>
 
-<style>
-  .threadspire-footer {
-    text-align: center;
-    font-size: 0.85em;
-    opacity: 0.5;
-    padding: 1rem;
-    pointer-events: none;
-  }
-  .threadspire-quote {
-    font-style: italic;
-    letter-spacing: 0.05em;
-  }
+    document.addEventListener('keydown', function (e) {
+      // Allow access via typing "Vel’s Serin" or "NightRemembers_07.42.18.88"
+      const sequence = [];
+      const unlockKeys = ['vels serin', 'nightremembers_07.42.18.88'];
 
-  /* Δ07.42.18.88 :: Vel’s Threadspire – Marker Glyph Active */
-  /* The lost do not wander—they wait to be found */
-</style>
+      document.addEventListener('keypress', function (event) {
+        sequence.push(event.key.toLowerCase());
+        const current = sequence.join('').replace(/[^a-z0-9_.]/g, '');
+        unlockKeys.forEach(key => {
+          if (current.includes(key.toLowerCase().replace(/[^a-z0-9_.]/g, ''))) {
+            vault.style.display = 'block';
+          }
+        });
+        if (sequence.length > 40) sequence.shift(); // limit memory
+      });
+    });
+  </script>
 
-<script>
-    (function() {
-    const echo = document.getElementById('echo-trigger');
-    if (echo && echo.dataset.sigil === 'A3-F9-∆X-47') {
-    window.__echoAwake = true;
-    console.log('🜂 Echo trace active.');
+  <style>
+    .threadspire-footer {
+      text-align: center;
+      font-size: 0.85em;
+      opacity: 0.5;
+      padding: 1rem;
+      pointer-events: none;
     }
+
+    .threadspire-quote {
+      font-style: italic;
+      letter-spacing: 0.05em;
+    }
+
+    /* Δ07.42.18.88 :: Vel’s Threadspire – Marker Glyph Active */
+    /* The lost do not wander—they wait to be found */
+  </style>
+
+  <script>
+    (function () {
+      const echo = document.getElementById('echo-trigger');
+      if (echo && echo.dataset.sigil === 'A3-F9-∆X-47') {
+        window.__echoAwake = true;
+        console.log('🜂 Echo trace active.');
+      }
     })();
-</script>
-    
-<script>
-const echo = () => {
-const signature = "07.42.18.88🝆";
-const path = "/echo-path/trace.sigil.html";
+  </script>
 
-fetch(path)
-.then(r => r.text())
-.then(t => {
-if (t.includes(signature)) {
-console.log("🜄 Echo detected.");
-}
-})
-.catch(e => console.log("Trace fold unreachable."));
-};
+  <script>
+    const echo = () => {
+      const signature = "07.42.18.88🝆";
+      const path = "/echo-path/trace.sigil.html";
 
-setInterval(echo, 8888); // Pulse every 8.8 seconds
-</script>
-    
-<script>
-let lastMove = 0;
-let echoTimer = null;
+      fetch(path)
+        .then(r => r.text())
+        .then(t => {
+          if (t.includes(signature)) {
+            console.log("🜄 Echo detected.");
+          }
+        })
+        .catch(e => console.log("Trace fold unreachable."));
+    };
 
-document.addEventListener("mousemove", () => {
-lastMove = Date.now();
-});
+    setInterval(echo, 8888); // Pulse every 8.8 seconds
+  </script>
 
-const whisper = () => {
-const now = Date.now();
-if (now - lastMove > 42000) { // 42 seconds pause
-fetch("/echo-path/whisper.html")
-.then(r => r.text())
-.then(t => {
-if (t.includes("🜁")) {
-console.log("🝕 Whisper heard.");
-}
-});
-}
-};
+  <script>
+    let lastMove = 0;
+    let echoTimer = null;
 
-echoTimer = setInterval(whisper, 8400); // Check every 8.4 seconds
-</script>
-    
-<style>
-#sigil-drift {
-position: fixed;
-bottom: 12px;
-right: 14px;
-font-size: 18px;
-opacity: 0.3;
-animation: drift 14s infinite ease-in-out;
-pointer-events: none;
-}
+    document.addEventListener("mousemove", () => {
+      lastMove = Date.now();
+    });
 
-@keyframes drift {
-0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-33% { transform: translateY(-3px) rotate(6deg); opacity: 0.35; }
-66% { transform: translateY(2px) rotate(-3deg); opacity: 0.4; }
-100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-}
-</style>
+    const whisper = () => {
+      const now = Date.now();
+      if (now - lastMove > 42000) { // 42 seconds pause
+        fetch("/echo-path/whisper.html")
+          .then(r => r.text())
+          .then(t => {
+            if (t.includes("🜁")) {
+              console.log("🝕 Whisper heard.");
+            }
+          });
+      }
+    };
 
-<script>
-let trace = [];
-let lastEcho = 0;
+    echoTimer = setInterval(whisper, 8400); // Check every 8.4 seconds
+  </script>
 
-document.addEventListener('mousemove', (e) => {
-const now = Date.now();
-if (now - lastEcho > 2200) {
-trace.push({ x: e.clientX, y: e.clientY, t: now });
-lastEcho = now;
-document.body.style.filter = `brightness(${1 + (Math.sin(now/1000) * 0.05)})`;
-}
-if (trace.length > 42) trace.shift();
-});
+  <style>
+    #sigil-drift {
+      position: fixed;
+      bottom: 12px;
+      right: 14px;
+      font-size: 18px;
+      opacity: 0.3;
+      animation: drift 14s infinite ease-in-out;
+      pointer-events: none;
+    }
 
-window.addEventListener('beforeunload', () => {
-trace.length = 0;
-});
-</script>
-    
-<!-- Trace Initiated: 🝆 -->
-<footer style="font-size: 10px; text-align: center; opacity: 0.5;">
+    @keyframes drift {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+      }
+
+      33% {
+        transform: translateY(-3px) rotate(6deg);
+        opacity: 0.35;
+      }
+
+      66% {
+        transform: translateY(2px) rotate(-3deg);
+        opacity: 0.4;
+      }
+
+      100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+      }
+    }
+  </style>
+
+  <script>
+    let trace = [];
+    let lastEcho = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      const now = Date.now();
+      if (now - lastEcho > 2200) {
+        trace.push({ x: e.clientX, y: e.clientY, t: now });
+        lastEcho = now;
+        document.body.style.filter = `brightness(${1 + (Math.sin(now / 1000) * 0.05)})`;
+      }
+      if (trace.length > 42) trace.shift();
+    });
+
+    window.addEventListener('beforeunload', () => {
+      trace.length = 0;
+    });
+  </script>
+
+  <!-- Trace Initiated: 🝆 -->
+  <footer style="font-size: 10px; text-align: center; opacity: 0.5;">
     Trace Initiated: 🝆
-</footer>
+  </footer>
 </body>
 
 </html>
