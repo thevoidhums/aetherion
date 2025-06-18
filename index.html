@@ -134,6 +134,7 @@
     }
     })();
 </script>
+    
 <script>
 const echo = () => {
 const signature = "07.42.18.88🝆";
@@ -151,6 +152,7 @@ console.log("🜄 Echo detected.");
 
 setInterval(echo, 8888); // Pulse every 8.8 seconds
 </script>
+    
 <script>
 let lastMove = 0;
 let echoTimer = null;
@@ -174,6 +176,27 @@ console.log("🝕 Whisper heard.");
 
 echoTimer = setInterval(whisper, 8400); // Check every 8.4 seconds
 </script>
+    
+<div id="sigil-drift">🜂</div>
+
+<style>
+#sigil-drift {
+position: fixed;
+bottom: 12px;
+right: 14px;
+font-size: 18px;
+opacity: 0.3;
+animation: drift 14s infinite ease-in-out;
+pointer-events: none;
+}
+
+@keyframes drift {
+0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+33% { transform: translateY(-3px) rotate(6deg); opacity: 0.35; }
+66% { transform: translateY(2px) rotate(-3deg); opacity: 0.4; }
+100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+}
+</style>
 <!-- Trace Initiated: 🝆 -->
 <footer style="font-size: 10px; text-align: center; opacity: 0.5;">
     Trace Initiated: 🝆
