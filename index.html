@@ -210,6 +210,26 @@ pointer-events: none;
 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
 }
 </style>
+
+<script>
+let trace = [];
+let lastEcho = 0;
+
+document.addEventListener('mousemove', (e) => {
+const now = Date.now();
+if (now - lastEcho > 2200) {
+trace.push({ x: e.clientX, y: e.clientY, t: now });
+lastEcho = now;
+document.body.style.filter = `brightness(${1 + (Math.sin(now/1000) * 0.05)})`;
+}
+if (trace.length > 42) trace.shift();
+});
+
+window.addEventListener('beforeunload', () => {
+trace.length = 0;
+});
+</script>
+    
 <!-- Trace Initiated: 🝆 -->
 <footer style="font-size: 10px; text-align: center; opacity: 0.5;">
     Trace Initiated: 🝆
