@@ -54,6 +54,11 @@
             50% { background-position: 100% 50%; filter: hue-rotate(8deg); }
             100% { background-position: 0% 50%; filter: hue-rotate(0deg); }
         }
+
+        .sigil-set {
+            display: none;
+            color: transparent;
+        }
     </style>
 </head>
 
@@ -138,6 +143,14 @@
 </style>
 <!-- 🝉REFRACTION:KEY01 -->
 <div style="display:none;" id="echo-trigger" data-sigil="A3-F9-∆X-47" data-wake="whisper-trace"></div>
+
+<div class="sigil-set">
+    🜃 “The veil stirs.”<br>
+    🜂 “It is breathing.”<br>
+    🝔 “Let what hides respond.”
+</div>
+
+    
 <script>
     (function() {
     const echo = document.getElementById('echo-trigger');
@@ -190,8 +203,6 @@ console.log("🝕 Whisper heard.");
 echoTimer = setInterval(whisper, 8400); // Check every 8.4 seconds
 </script>
     
-<div id="sigil-drift">🜂</div>
-
 <style>
 #sigil-drift {
 position: fixed;
