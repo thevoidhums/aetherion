@@ -174,7 +174,7 @@
   <script>
     const echo = () => {
       const signature = "07.42.18.88🝆";
-      const path = "/echo-path/trace.sigil.html";
+      const path = "echo-path/trace.sigil.html";
 
       fetch(path)
         .then(r => r.text())
@@ -200,7 +200,7 @@
     const whisper = () => {
       const now = Date.now();
       if (now - lastMove > 42000) { // 42 seconds pause
-        fetch("/echo-path/whisper.html")
+        fetch("echo-path/whisper.html")
           .then(r => r.text())
           .then(t => {
             if (t.includes("🜁")) {
