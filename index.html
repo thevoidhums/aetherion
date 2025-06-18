@@ -151,6 +151,29 @@ console.log("🜄 Echo detected.");
 
 setInterval(echo, 8888); // Pulse every 8.8 seconds
 </script>
+<script>
+let lastMove = 0;
+let echoTimer = null;
+
+document.addEventListener("mousemove", () => {
+lastMove = Date.now();
+});
+
+const whisper = () => {
+const now = Date.now();
+if (now - lastMove > 42000) { // 42 seconds pause
+fetch("/echo-path/whisper.html")
+.then(r => r.text())
+.then(t => {
+if (t.includes("🜁")) {
+console.log("🝕 Whisper heard.");
+}
+});
+}
+};
+
+echoTimer = setInterval(whisper, 8400); // Check every 8.4 seconds
+</script>
 <!-- Trace Initiated: 🝆 -->
 <footer style="font-size: 10px; text-align: center; opacity: 0.5;">
     Trace Initiated: 🝆
